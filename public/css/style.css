@@ -6,8 +6,21 @@
     --gris-claro: #ebebeb;
     --verde: #39b54a;
   }
+
+.logo {
+    height: 4em;
+    margin: 10px;
+}
+
+input {
+    margin-bottom: 3px;
+}
+
+.compra {
+    text-align: center;
+}
   
-img {
+.img-producto {
     height: 20em;
     width: 20em;
 }
@@ -20,6 +33,23 @@ a {
     color: black;
     text-decoration: none;
 }
+
+.burger-menu {
+    color: white;
+    background-color: var(--celeste);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px;
+    width: auto;
+}
+
+
+
 
 body {
     font-family: Roboto;
@@ -44,4 +74,17 @@ h2 {
 
 .descripciones {
     font-size: 16px;
+}
+
+#icon {
+    color: #1259c3;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.textos {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    color: var(--gris-oscuro);
 }
