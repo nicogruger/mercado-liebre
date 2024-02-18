@@ -1,7 +1,18 @@
-body {
-    background-color: yellow;
+body{
+    font-family: Roboto;
 }
 
-h1 {
-    color:red;
+.logo {
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+}
+
+.lupa {
+    height: 40%;
+    width: 20%;
+}
+
+body{
+    background-color: #EAC926;
 }
