@@ -19,11 +19,47 @@
   .compra {
     text-align: center;
   }
-  
-  .img-producto {
-    width: 90%;
-    padding: auto;
-  }
+    
+  main {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.productos-visitados ul, .productos-oferta ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos-visitados li, .productos-oferta li {
+    margin: 10px;
+}
+
+.articulo {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.img-producto {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.precio, .descuento {
+    text-align: left;
+    margin: 0;
+}
   
   li {
     list-style: none;
@@ -86,22 +122,13 @@
     color: var(--gris-oscuro);
   }
   
-  main {
-    background-color: var(--gris-claro);
-    padding: 20px;
-  }
-  
-  .descuento {
-    margin-bottom: 10px;
-  }
   
   h3,
-  #banner {
+  nav {
     display: none;
   }
   
   #banner {
-    display: block;
     margin: auto; 
     max-width: 100%; 
     height: auto; 
@@ -110,12 +137,31 @@
   
   @media (min-width: 361px) {
     
-    h3 {
+    .articulo{
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    h3,
+    nav {
       display: block;
+    }
+
+    main{
+      width: 90%;
+      margin: 0 auto; 
+      box-sizing: border-box; 
+    }
+
+    .descuento {
+      margin-bottom: 10px;
     }
   }
   
   @media (min-width: 769px) {
+
+    .articulo{
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
 
   }
   
