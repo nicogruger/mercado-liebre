@@ -7,7 +7,6 @@
   --verde: #39b54a;
 }
 
-
 header {
   background-color: var(--amarillo);
   padding: 10px;
@@ -32,6 +31,10 @@ input {
   border: none;
   height: 25px;
   width: 250px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 17px;
 }
 
 .compra {
@@ -49,6 +52,7 @@ button.lupa {
 #banner {
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
   
 main {
@@ -58,6 +62,12 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#productos{
+  background-color: var(--gris-claro);
+  padding-bottom: 20px;
+  padding-top: 22px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .productos-visitados ul, .productos-oferta ul {
   list-style-type: none;
@@ -73,10 +83,10 @@ main {
 }
 
 .articulo {
-  border: 1px solid #ddd;
   padding: 10px;
   width: 200px;
   text-align: center;
+  flex: 1 1 100%;
 }
 
 .img-producto {
@@ -86,13 +96,33 @@ main {
   margin-bottom: 10px;
 }
 
-.precio, .descuento {
-  text-align: left;
-  margin: 0;
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-li {
+.descuento{
+  color:#39b54a;
+}
+
+
+#envio {
+  color: #39b54a;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  position: relative;
+  right: 15px;
+  bottom: 22px;
+  font-size: 20px;
+}
+
+
+.productos-visitados ul li, .productos-oferta ul li {
   list-style: none;
+  background-color: white;
 }
 
 a {
@@ -125,6 +155,11 @@ a {
 h2 {
   font-size: 24px;
   color: var(--gris-oscuro);
+  margin-left: 20px;
+}
+
+h3{
+  color: var(--gris-oscuro);
 }
 
 .precio,
@@ -153,20 +188,15 @@ nav {
 }
 
 @media (min-width: 450px) {
-  
-  .articulo{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-  
-  .descuento {
-    margin-bottom: 10px;
+
+  .productos-visitados ul li, .productos-oferta ul li {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 
-  header > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  h3 {
+    display: block;
   }
+  
 
   .logo {
     width: 50%;
@@ -199,9 +229,12 @@ nav {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
   }
+
+
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 910px) {
+
   h3,
   nav {
     display: block;
@@ -211,26 +244,47 @@ nav {
     display: none;
   }
 
-  .articulo{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
 
-  .logo {
-    width: 40%;
-  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 20px;
+}
 
-  input[type="text"] {
-    width: 35%;
+.logo {
+    width: 28%;
+}
 
-  }
+input[type="text"] {
+    width: 33%;
+}
 
-  button.lupa {
+button.lupa {
     width: 5%;
-  }
+    position: relative;
+    right: 18px;
+}
 
-  .compra {
-    width: 20%;
-  }
+.compra {
+    width: 33%;
+    font-size: 18px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+}
+
+nav ul li {
+  margin-right: 12px;
+}
+
+nav ul li:nth-child(5) {
+  margin-left: auto; 
+}
 
 }
 
