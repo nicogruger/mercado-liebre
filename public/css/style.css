@@ -46,7 +46,10 @@ button.lupa {
   color: black;
   border-radius: 5px;
   border: none;
-  height: 30px;
+  height: 33px;
+  max-width: 450px;
+  position: relative;
+  bottom: 1px;
 }
 
 #banner {
@@ -133,17 +136,17 @@ a {
 .burger-menu {
   color: white;
   background-color: var(--celeste);
-  padding: 10px;
+  padding: 10px 1px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  margin: auto;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px
+  width: 40px;
 }
 
 
@@ -187,7 +190,8 @@ nav {
   display: none;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 450px) and (max-width: 909px) {
+
 
   .productos-visitados ul li, .productos-oferta ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -197,37 +201,56 @@ nav {
     display: block;
   }
   
-
-  .logo {
-    width: 50%;
-    height: auto;
+  .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
-
+  
+  .logo {
+    flex-basis: 30%; 
+    max-width: 30%; 
+  }
+  
   input[type="text"] {
-    width: 45%;
-    margin-left: 10px;
+    flex-basis: 35%; 
     height: 30px;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
     font-size: 17px;
   }
-
+  
   button.lupa {
-    width: 5%;
+    flex-basis: 7%;
     height: 40px;
-    margin-bottom: 3px;
-    margin-left: 3px;
+    align-self: stretch;
+    position: relative;
+    top: 21px;
+    left: 3px;
   }
-
+  
   .compra {
     font-size: 23px;
+    text-align: center;
+    width: 100%; 
+    order: 4;
   }
+  
+
+  
 
   .burger-menu{
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center; 
+    width: 45px;
+    height: 25px;
+    padding: 10px 1px;
+    margin: auto;
+    margin-bottom: 10px;
   }
 
 
@@ -265,6 +288,8 @@ button.lupa {
     width: 5%;
     position: relative;
     right: 18px;
+    bottom: 1px;
+    height: 35px;
 }
 
 .compra {
