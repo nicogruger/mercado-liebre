@@ -190,7 +190,7 @@ nav {
   display: none;
 }
 
-@media (min-width: 450px) and (max-width: 909px) {
+@media (min-width: 461px) and (max-width: 769px) {
 
 
   .productos-visitados ul li, .productos-oferta ul li {
@@ -256,7 +256,7 @@ nav {
 
 }
 
-@media (min-width: 910px) {
+@media (min-width: 769px) {
 
   h3,
   nav {
@@ -309,6 +309,10 @@ nav ul li {
 
 nav ul li:nth-child(5) {
   margin-left: auto; 
+}
+
+.productos-visitados ul li, .productos-oferta ul li {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 }
