@@ -22,6 +22,7 @@ body {
 .logo {
   height: 4em;
   margin: 10px;
+  cursor: pointer; 
 }
 
 input {
@@ -35,6 +36,7 @@ input {
   padding: 5px;
   text-align: center;
   font-size: 17px;
+  cursor: pointer; 
 }
 
 .compra {
@@ -50,6 +52,7 @@ button.lupa {
   max-width: 450px;
   position: relative;
   bottom: 1px;
+  cursor: pointer; 
 }
 
 #banner {
@@ -90,7 +93,34 @@ main {
   width: 200px;
   text-align: center;
   flex: 1 1 100%;
+  transition: box-shadow 0.3s ease;
 }
+
+.articulo h3 {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.articulo:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.articulo:hover h3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fa-truck-fast {
+  transition: transform 0.3s ease; 
+  display: inline-block; 
+  transform-origin: 90%; 
+}
+
+.articulo:hover .fa-truck-fast {
+  transform: rotateZ(-90deg);
+}
+
 
 .img-producto {
   max-width: 100%;
@@ -120,17 +150,20 @@ main {
   right: 15px;
   bottom: 22px;
   font-size: 20px;
+  cursor: pointer; 
 }
 
 
 .productos-visitados ul li, .productos-oferta ul li {
   list-style: none;
   background-color: white;
+  cursor: pointer; 
 }
 
 a {
   color: black;
   text-decoration: none;
+  cursor: pointer; 
 }
 
 .burger-menu {
@@ -146,7 +179,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 40px; 
 }
 
 
@@ -171,17 +204,19 @@ h3{
   font-size: 16px;
 }
 
-#icon {
+.textos-flex .texto-item i {
   color: #1259c3;
   font-size: 2em;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-.textos {
+.texto-item {
   background-color: white;
   text-align: center;
   padding: 25px;
   color: var(--gris-oscuro);
+  font-size: 1em;
 }
 
 
@@ -190,11 +225,65 @@ nav {
   display: none;
 }
 
+/* LOGIN.HTML */
+
+input {
+  border: 2px solid var(--gris-claro);
+}
+
+input:focus {
+  outline: none; 
+  border: 2px solid var(--celeste); 
+}
+
+input:focus:invalid {
+  border: 2px solid red; 
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.8em;
+}
+
+input:focus:invalid + .error-message {
+  display: block;
+}
+
+.boton-inicio {
+  display: inline-block; 
+  padding: 10px 15px; 
+  background-color: var(--celeste);
+  color: white; 
+  text-align: center; 
+  text-decoration: none; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.boton-inicio:hover {
+  background-color: #0022AA; 
+}
+
+.burger-menu:hover {
+  background-color: #0022AA; 
+}
+
+
+
+
+
 @media (min-width: 461px) and (max-width: 769px) {
 
+  .burger-menu:hover {
+    background-color: #0022AA; 
+  }
 
   .productos-visitados ul li, .productos-oferta ul li {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   h3 {
@@ -212,6 +301,7 @@ nav {
   .logo {
     flex-basis: 30%; 
     max-width: 30%; 
+    cursor: pointer; 
   }
   
   input[type="text"] {
@@ -221,6 +311,7 @@ nav {
     padding: 5px;
     text-align: center;
     font-size: 17px;
+    cursor: pointer; 
   }
   
   button.lupa {
@@ -230,6 +321,7 @@ nav {
     position: relative;
     top: 21px;
     left: 3px;
+    cursor: pointer; 
   }
   
   .compra {
@@ -251,6 +343,7 @@ nav {
     padding: 10px 1px;
     margin: auto;
     margin-bottom: 10px;
+    cursor: pointer; 
   }
 
 
@@ -315,7 +408,32 @@ nav ul li:nth-child(5) {
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
+.textos-flex {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-wrap: wrap; 
 }
 
+.texto-item {
+  flex: 1; 
+  margin: 10px; 
+  text-align: center; 
+}
 
+nav a{
+  transition: color 0.3s ease;
+}
 
+nav a:hover{
+  color: var(--celeste);
+}
+
+.textos-flex .texto-item i{
+  transition: color 0.3s ease;
+}
+
+.textos-flex .texto-item i:hover {
+  color: var(--azul);
+} 
+}
