@@ -1,3 +1,7 @@
+header, body, footer{
+    margin: 0px;
+}   
+
 :root {
   --amarillo: #EAC926;
   --azul: #03264C;
@@ -376,7 +380,6 @@ input:focus:invalid {
   display: none;
   color: red;
   font-size: 0.8em;
-  padding-top: 20px;
 }
 
 input:focus:invalid + .error-message{
