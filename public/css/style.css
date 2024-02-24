@@ -186,8 +186,6 @@ a {
   width: 40px; 
 }
 
-
-
 .cuerpo-de-texto {
   font-size: 12px;
 }
@@ -246,12 +244,10 @@ nav {
 }
 
 #loginForm input{
-  width: 20em;
+  width: 34%;
   height: 1.5em;
   margin: auto;
-  font-size: 20px;
-  
-}
+} 
 
 .boton-inicio {
   display: inline-block; 
@@ -286,19 +282,24 @@ nav {
   background-color: var(--gris-claro);
   padding-left: 30px;
   padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
 #registerForm input{
   position: relative;
-  top: 26px;
+  top: 9px;
   margin-top: 30px;
-  width: 23em;
+  width: 34%;
 }
 
 #registerForm h3{
   margin-top: 40px;
   position: relative;
   top: 30px;
+}
+
+#bug-min{
+  display: none;
 }
 
 footer {
@@ -388,8 +389,6 @@ input:focus:invalid + .error-message{
 }
 
 
-
-
 @media (min-width: 461px) and (max-width: 769px) {
 
   .burger-menu:hover {
@@ -450,9 +449,10 @@ input:focus:invalid + .error-message{
     order: 4;
   }
   
-
+  #bug-min{
+    display: block;
+  }
   
-
   .burger-menu{
     display: flex;
     justify-content: center;
@@ -472,6 +472,10 @@ input:focus:invalid + .error-message{
 
   h3,
   nav {
+    display: block;
+  }
+
+  #bug-min{
     display: block;
   }
 
@@ -501,7 +505,7 @@ button.lupa {
     position: relative;
     right: 18px;
     bottom: 2px;
-    height: 37px;
+    height: 36px;
     transition: color 0.3s ease;
 }
 
