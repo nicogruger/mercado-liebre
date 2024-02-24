@@ -35,30 +35,34 @@
         </div>
       </header>
 <body>
+
     <form id="registerForm">
-        <h2>Registro de Usuario</h2>
-        <label for="fullName">Nombre y apellido:</label>
-        <input type="text" id="fullName" name="fullName" required><br><br>
+
+      <h3>Datos de registro:</h3>
+
+        <input type="text" id="fullName" placeholder="Nombre y apellido" name="fullName" required minlength="2">
+        <div class="error-message">El nombre y apellido deben ser válidos.</div>
+
+        <input type="text" id="username" placeholder="Nombre de usuario" name="username" required>
+        <div class="error-message">El nombre de usuario ya está en uso.</div>
+
+        <input type="email" id="email" placeholder="E-mail" name="email" required>
+        <div class="error-message">El e-mail es obligatorio.</div>
+
+        <h3>Fecha de nacimiento:</h3>
+
+        <input type="date" id="birthdate"  name="birthdate" required>
         
-        <label for="username">Nombre de usuari@:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="birthdate">Fecha de nacimiento:</label>
-        <input type="date" id="birthdate" name="birthdate" required><br><br>
-        
-        <label for="address">Domicilio:</label>
-        <input type="text" id="address" name="address" required><br><br>
-        
-        <label>Perfil del usuario:</label>
+        <input type="text" id="address" placeholder="Domicilio" name="address" required>
+        <div class="error-message">Ingrese su domicilio.</div>
+
+        <h3>Perfil del usuario:</h3>
         <input type="radio" id="buyer" name="userProfile" value="Comprar">
-        <label for="buyer">Comprar</label>
+        <label for="buyer">Comprador</label>
         <input type="radio" id="seller" name="userProfile" value="Vender">
-        <label for="seller">Vender</label><br><br>
+        <label for="seller">Vendedor</label>
         
-        <label>Categorías de interés:</label><br>
+        <h3>Categorías de interés:</h3>
         <input type="checkbox" id="electro" name="interest" value="Electro">
         <label for="electro">Electro</label><br>
         <input type="checkbox" id="fashion" name="interest" value="Moda">
@@ -68,19 +72,63 @@
         <input type="checkbox" id="toys" name="interest" value="Juguetería">
         <label for="toys">Juguetería</label><br>
         <input type="checkbox" id="healthylife" name="interest" value="Vida sana">
-        <label for="healthylife">Vida sana</label><br><br>
+        <label for="healthylife">Vida sana</label>
         
-        <label for="userPhoto">Foto de usuario:</label>
-        <input type="file" id="userPhoto" name="userPhoto" accept="image/*"><br><br>
+        <h3>Foto de usuario:</h3>
+        <input type="file" id="userPhoto" name="userPhoto" class="boton-inicio" accept="image/*"><br>
         
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <label for="confirmPassword">Confirmar contraseña:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
-        
-        <button type="submit" onclick="submitForm(); return false;">Enviar</button>
-        <button type="button" onclick="resetForm();">Borrar todos los datos</button>
+        <input type="password" id="password" placeholder="Contraseña" name="password" required>
+        <div class="error-message">La contraseña es obligatoria.</div>
+
+        <input type="password" id="confirmPassword" placeholder="Confirme su contraseña" name="confirmPassword" required>
+
+        <br><br><br><a href="/" class="boton-inicio">Enviar</a><br>
+        <input type="reset" value="Borrar todos los datos" class="boton-inicio" style="height: 42px; top: -15px;">
+
     </form>
+
+    <div class="textos-flex">
+      <div class="texto-item">
+        <i class="fa-solid fa-credit-card icono-footer"></i>
+        <h3>Pagá con tarjeta o en efectivo</h3>
+        <p class="cuerpo-de-texto">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+      </div>
+    
+      <div class="texto-item">
+        <i class="fa-solid fa-gift icono-footer"></i>
+        <h3>Envío gratis desde $ 2.500</h3>
+        <p class="cuerpo-de-texto">Solo por estar registrad@ en Mercado Libre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+      </div>
+    
+      <div class="texto-item">
+        <i class="fa-solid fa-user-shield icono-footer"></i>
+        <h3>Seguridad, de principio a fin</h3>
+        <p class="cuerpo-de-texto">¿No te gusta? ¡Devolvelo! En Mercado Libre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-section">
+          <h4>Sobre Nosotros</h4>
+          <p>Somos MercadoLiebre S.R.L., comprometidos con brindarte los mejores productos del mercado.</p>
+      </div>
+      <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>Email: contacto@mercadoliebre.com</p>
+          <p>Teléfono: +11 24985490</p>
+      </div>
+      <div class="footer-section social-icons">
+          <h4>Síguenos</h4>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+      </div>
+      <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Políticas de Privacidad</a></li>
+          <li><a href="#">Ayuda</a></li>
+      </ul>
+      <p>Copyright © 1999-2024 MercadoLiebre S.R.L.</p>
+  </footer>
 </body>
 </html>

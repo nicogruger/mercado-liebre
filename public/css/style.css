@@ -16,7 +16,6 @@ header {
 
 body {
   font-family: Roboto;
-  box-sizing: border-box;
 }
 
 .logo {
@@ -53,12 +52,17 @@ button.lupa {
   position: relative;
   bottom: 1px;
   cursor: pointer; 
+  transition: color 0.3s ease;
+}
+
+button.lupa:hover {
+  color: var(--gris-oscuro);
 }
 
 #banner {
   width: 100%;
-  box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
   
 main {
@@ -216,7 +220,11 @@ h3{
   text-align: center;
   padding: 25px;
   color: var(--gris-oscuro);
-  font-size: 1em;
+  font-size: 1.1em;
+}
+
+.texto-item p{
+  font-size: 0.8em;
 }
 
 
@@ -225,29 +233,24 @@ nav {
   display: none;
 }
 
+.burger-menu:hover {
+  background-color: #0022AA; 
+}
+
 /* LOGIN.HTML */
 
-input {
-  border: 2px solid var(--gris-claro);
+#loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input:focus {
-  outline: none; 
-  border: 2px solid var(--celeste); 
-}
-
-input:focus:invalid {
-  border: 2px solid red; 
-}
-
-.error-message {
-  display: none;
-  color: red;
-  font-size: 0.8em;
-}
-
-input:focus:invalid + .error-message {
-  display: block;
+#loginForm input{
+  width: 20em;
+  height: 1.5em;
+  margin: auto;
+  font-size: 20px;
+  
 }
 
 .boton-inicio {
@@ -268,10 +271,121 @@ input:focus:invalid + .error-message {
   background-color: #0022AA; 
 }
 
-.burger-menu:hover {
-  background-color: #0022AA; 
+.formulario {
+ padding: 3em;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ box-sizing: border-box;
 }
 
+/* REGISTER.HTML */
+
+#registerForm{
+  display: flex;
+  flex-direction: column;
+  align-items:baseline;
+  background-color: var(--gris-claro);
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+#registerForm input{
+  position: relative;
+  top: 26px;
+  margin-top: 30px;
+  width: 23em;
+}
+
+#registerForm h3{
+  margin-top: 40px;
+  position: relative;
+  top: 30px;
+}
+
+footer {
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ccc;
+  font-size: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer a {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--azul);
+}
+
+.footer-section {
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.footer-section h4 {
+  color: var(--gris-oscuro);
+}
+
+footer i{
+  display: inline-block;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1.2em;
+}
+
+footer i:hover{
+  color: var(--azul);
+}
+
+/*INPUT + Error mensaje*/
+
+input:focus {
+  outline: none; 
+  border: 2px solid var(--celeste); 
+}
+
+input:focus:invalid {
+  border: 2px solid red; 
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.8em;
+  padding-top: 10px;
+}
+
+#registerForm .error-message {
+  display: none;
+  color: red;
+  font-size: 0.8em;
+  padding-top: 20px;
+}
+
+input:focus:invalid + .error-message{
+  display: block;
+}
+
+#registerForm input:focus:invalid + .error-message {
+  display: block;
+  margin-top: 15px;
+}
 
 
 
@@ -322,6 +436,11 @@ input:focus:invalid + .error-message {
     top: 21px;
     left: 3px;
     cursor: pointer; 
+    transition: color 0.3s ease;
+  }
+
+  button.lupa:hover{
+    color: var(--gris-oscuro);
   }
   
   .compra {
@@ -365,7 +484,7 @@ input:focus:invalid + .error-message {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 15px;
     gap: 20px;
 }
 
@@ -381,8 +500,14 @@ button.lupa {
     width: 5%;
     position: relative;
     right: 18px;
-    bottom: 1px;
-    height: 35px;
+    bottom: 2px;
+    height: 37px;
+    transition: color 0.3s ease;
+}
+
+button.lupa:hover{
+  color: var(--gris-oscuro);
+
 }
 
 .compra {
