@@ -100,7 +100,6 @@ main {
   padding: 10px;
   width: 200px;
   text-align: center;
-  flex: 1 1 100%;
   transition: box-shadow 0.3s ease;
 }
 
@@ -392,7 +391,40 @@ input:focus:invalid + .error-message{
 }
 
 
-@media (min-width: 461px) and (max-width: 769px) {
+@media (min-width: 420px) and (max-width: 850px) {
+
+  nav{
+    display: block;
+  }
+
+  .burger-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 45px;
+    height: 25px;
+    padding: 10px 1px;
+    margin: auto;
+    margin-bottom: 10px;
+    cursor: pointer; 
+  }
+
+  .burger-menu{
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  nav ul li {
+    font-size: 13px;
+    flex-basis: calc(50% / 3);
+  }
+
 
   .burger-menu:hover {
     background-color: #0022AA; 
@@ -454,18 +486,6 @@ input:focus:invalid + .error-message{
   
   #bug-min{
     display: block;
-  }
-  
-  .burger-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 45px;
-    height: 25px;
-    padding: 10px 1px;
-    margin: auto;
-    margin-bottom: 10px;
-    cursor: pointer; 
   }
 
 
